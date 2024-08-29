@@ -4,7 +4,9 @@
 
   <div class="list-group list-reset">
     @for (tag of tagsList; track tag) {
-      <button class="list-group-item list-group-item-action"
+      <button
+      class="list-group-item list-group-item-action"
+      (click)="searchTag(tag)"
       >{{tag | titlecase}} </button>
     } @empty {
       <span class="text-light">There no items to show</span>
