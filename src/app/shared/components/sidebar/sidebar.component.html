@@ -3,6 +3,11 @@
   <hr class="text-white">
 
   <div class="list-group list-reset">
-    <button class="list-group-item list-group-item-action">Valorant</button>
+    @for (tag of tagsList; track tag) {
+      <button class="list-group-item list-group-item-action"
+      >{{tag | titlecase}} </button>
+    } @empty {
+      <span class="text-light">There no items to show</span>
+    }
   </div>
 </div>
